@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AgendaFlow</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <div class="logo">
+      <a href="index.html">AgendaFlow</a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="today.html">Today</a></li>
+      <li><a href="calendar.html">Calendar</a></li>
+      <li><a href="tasks.html">Tasks</a></li>
+      <li><a href="officehours.html">Office Hours</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+
+    <aside class="sidebar">
+      <div class="calendar-card">
+
+        <div class="header">
+          <div id="prev" class="btn">
+            <i class="fa-solid fa-arrow-left"></i>
+          </div>
+
+          <div id="month-year"></div>
+
+          <div id="next" class="btn">
+            <i class="fa-solid fa-arrow-right"></i>
+          </div>
+        </div>
+
+        <div class="weekdays">
+          <div>Sun</div>
+          <div>Mon</div>
+          <div>Tue</div>
+          <div>Wed</div>
+          <div>Thu</div>
+          <div>Fri</div>
+          <div>Sat</div>
+        </div>
+
+        <div class="days" id="days"></div>
+
+      </div>
+  <div class="card">
+    <h3>Upcoming Office Hours</h3>
+    <div id="officeHoursList"></div>
+  </div>
+</aside>
+    </aside>
+
+
+    <main class="main">
+
+      <div class="card highlight">
+        <h2>Next Due Task</h2>
+        <div id="nextTask"></div>
+        <div id="nextDueTask"></div>
+      </div>
+
+      <div class="card">
+        <h2>Upcoming Tasks</h2>
+        <div id="taskList"></div>
+      </div>
+
+    </main>
+
+    <aside class="sidebar">
+
+      <div class="card officehours-card">
+  <h3>Add Office Hours</h3>
+  <input id="officeName" type="text" placeholder="Course / Office Hours Name" />
+  <input id="officeDate" type="date" />
+  <input id="officeTime" type="time" step="60" />
+  <button id="addOfficeButton">Add Office Hours</button>
+</div>
+
+      <div class="card">
+        <h3>Add Task</h3>
+
+        <input id="taskName" type="text" placeholder="Task name" />
+        <input id="taskDate" type="date" />
+
+        <select id="taskPriority">
+          <option value="low">Low Priority</option>
+          <option value="medium">Medium Priority</option>
+          <option value="high">High Priority</option>
+        </select>
+
+        <button id="addTaskButton">Add Task</button>
+      </div>
+
+    </aside>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
